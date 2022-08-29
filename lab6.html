@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let year1 = new Array()
+        let year2 = new Array()
+        let year3 = new Array()
+        let year4 = new Array()
+        let student = [
+            {
+                fullname: 'นายมุ่งมานัก เรียนมากปี1',
+                age: 18,
+                year: 1,
+                gpa: 3.4,
+                help: true,
+            },
+            {
+                fullname: 'นายส่งงานช้า ตลอดมาปี2',
+                age: 19,
+                year: 2,
+                gpa: 3.0,
+                help: false,
+            },
+            {
+                fullname: 'นางสาวใส่ไต ดีงามปี3',
+                age: 20,
+                year: 3,
+                gpa: 2.9,
+                help: true,
+            },
+            {
+                fullname: 'นางสาวหาของ ชื่นใจปี4',
+                age: 20,
+                year: 4,
+                gpa: 2.9,
+                help: true,
+            },
+            {
+                fullname: 'นางสาวหาของ ชื่นใจปี1',
+                age: 20,
+                year: 1,
+                gpa: 3.5,
+                help: false,
+            },
+            {
+                fullname: 'นางสาวหาของ ชื่นใจปี1',
+                age: 20,
+                year: 1,
+                gpa: 3.5,
+                help: true,
+            },
+            {
+                fullname: 'นางสาวหาของ ชื่นใจ12345ปี2',
+                age: 20,
+                year: 2,
+                gpa: 2.76,
+                help: true,
+            },
+        ]
+        for (let i = 0; i < student.length; i++) {
+            if (student[i].year == 1 && student[i].gpa > 3.2) {
+                year1.push(student[i])
+            } else if (student[i].gpa > 2.75 && student[i].help == true) {
+                if (student[i].year == 2) {
+                    year2.push(student[i])
+                }
+                if (student[i].year == 3) {
+                    year3.push(student[i])
+                }
+                if (student[i].year == 4) {
+                    year4.push(student[i])
+                }
+            }
+        }
+        console.log('ชั้นปีที่ 1 ')
+        if (year1.length < 1) {
+            console.log(ไม่มี)
+        } else {
+            for (i = 0; i < year1.length; i++) {
+                if (year1[i].help == true) {
+                    console.log(
+                        year1[i].fullname + '  เนื่องจากเกรดถึงเกณฑ์เเละยังช่วยงานด้วย'
+                    )
+                } else {
+                    console.log(year1[i].fullname + '  เนื่องจากเกรดถึงเกณฑ์')
+                }
+            }
+        }
+        console.log('ชั้นปีที่ 2')
+        if (year2.length < 1) {
+            console.log('ไม่มี')
+        } else {
+            for (i = 0; i < year2.length; i++) {
+                console.log(
+                    year2[i].fullname + 'เนื่องจากเกรดถึงเกณฑ์เเละยังช่วยงานด้วย'
+                )
+            }
+        }
+        console.log('ชั้นปีที่ 3')
+        if (year3.length < 1) {
+            console.log('ไม่มี')
+        } else {
+            for (i = 0; i < year3.length; i++) {
+                console.log(
+                    year3[i].fullname + 'เนื่องจากเกรดถึงเกณฑ์เเละยังช่วยงานด้วย'
+                )
+            }
+        }
+        console.log('ชั้นปีที่ 4')
+        if (year4.length < 1) {
+            console.log('ไม่มี')
+        } else {
+            for (i = 0; i < year4.length; i++) {
+                console.log(
+                    year4[i].fullname + 'เนื่องจากเกรดถึงเกณฑ์เเละยังช่วยงานด้วย'
+                )
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Hello
+
+
+</body>
+
+</html>
